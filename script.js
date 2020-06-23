@@ -36,14 +36,21 @@ $("#find-food").on("click", function(event) {
 
         // ingredient list
         var ingredientList = response.hits[0].recipe.ingredientLines;
-        console.log(ingredientList);
+        // console.log(ingredientList);
+
+        var toAdd = document.createDocumentFragment();
+
+        for (var i = 0; i < ingredientList.length; i++){
+            document.getElementById("food-view").innerHTML += "<li>" + ingredientList[i] + "</li>";
+            console.log(ingredientList[i]);
+
+        }
+
 
         // create element to hold ingredient
-        var pIngredient = $("<ul>").text("Ingredient list: " + ingredientList)
 
+        // Displaying the ingredient list
 
-        $("#food-view").text(JSON.stringify(response));
-        console.log(response.hits[0]);
 
         // render the first 5
 
