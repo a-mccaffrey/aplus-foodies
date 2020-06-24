@@ -1,0 +1,41 @@
+body{
+    background-color: seashell;
+}
+
+main{
+    height:auto;
+    width: auto;
+    border:2px solid black;
+}
+
+.jumbotron{
+    padding: 25px 25px 25px 25px;
+}
+
+#decision{
+    width:180px;
+    margin-top:-10px;
+    margin-left:5px;
+    background:seashell;
+    font-size: medium;
+}
+
+.container {
+    margin: 10px 0px 10px 20px;
+    max-width: 100%;
+    width: 90%;
+}
+
+#gRep{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.row{
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+#recipesSection{
+    padding-left: 15px;
+}
