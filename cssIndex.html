@@ -18,8 +18,9 @@
       href="css/materialize.min.css"
       media="screen,projection"
     />
-    <!---->
+    <!--Link our own CSS-->
     <link rel="stylesheet" href="css/style.css" />
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -29,23 +30,25 @@
   <body>
     <!-- <div class="row">
       <div class="col-12"> -->
-        <div class="jumbotron no-gutters" style="background-color: green;">
-          <h1 class="display-4 text-center" style="color: yellow;">
-            Don't know what to eat?
-            <i class="medium material-icons">restaurant</i>
-          </h1>
-        <!-- </div>
+    <div class="jumbotron jumbotron-fluid">
+      <h1 class="display-4 text-center">
+        Don't know what to eat?
+        <i class="medium material-icons">restaurant</i>
+      </h1>
+      <!-- </div>
       </div> -->
     </div>
 
-    <main class="container">
+    <main class="container" id="decision-container">
       <h2 id="decision">Let us help you decide.</h2>
 
       <div class="row">
         <div class="col">
           <div class="input-field col s12">
             <input id="food-input" type="text" class="validate" />
-            <label for="food-input">Enter 1 <strong>MAIN</strong> Ingredient</label>
+            <label for="food-input"
+              >Enter 1 <strong>MAIN</strong> Ingredient</label
+            >
           </div>
         </div>
       </div>
@@ -87,20 +90,54 @@
       </div>
 
       <div>
-        <a class="waves-effect waves-light btn" type="submit" id="gRep">Get Recipe</a>
+        <a class="waves-effect waves-light btn" type="submit" id="gRep"
+          >Get Recipe</a
+        >
       </div>
     </main>
 
     <!--Section that houses the printed Recipes and clear button-->
-    <section id="recipesSection">
+    <section id="recipesSection" class="container">
       <h5>Recipes:</h5>
 
       <div class="section">
         <a class="waves-effect waves-light btn-small" id="clear">Clear All</a>
       </div>
+      <div class="divider"></div>
 
       <!--div to include the recipe cards-->
-      <div></div>
+        <!-- Beginning -->
+          <div class="container recipe-space">
+            <div class="img"></div>
+            <div class="text-container">
+              <span class="decoration-line"></span>
+              <h1 id="recipe-title">Recipe Title</h1>
+              <ul class="ingredients-list">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+              </ul>
+              <p id="recipe-instructions">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                magnam id assumenda aliquam possimus unde fugit quod veritatis
+                vero quisquam totam illo rem qui, quis iure voluptatibus
+                voluptatem odit omnis ipsa. Vero beatae exercitationem
+                consectetur deserunt quo aliquam repellendus iusto deleniti,
+                quis neque. Sed ipsum hic in velit dolorum? Illo.
+              </p>
+              <a
+                id="recipe link"
+                href="https://www.nytimes.com/2018/12/31/smarter-living/better-habits-tips-new-year-resolutions-science.html"
+                target="_blank"
+                >See recipe source</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- End -->
     </section>
 
     <!-- <nav>
