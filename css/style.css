@@ -23,6 +23,7 @@ h1 {
     margin-left:5px;
     background: #FEEFE5;
     font-size: medium;
+    padding-left: 10px;
 }
 
 .container #decision-container{
@@ -147,7 +148,7 @@ div.container {
    /* box-shadow: 0 8px 16px rgba(black, .45); */
 }
 
-div.img {
+img {
    height: 300px;
    width: 100%;
    background: url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg");

@@ -1,208 +1,139 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--Import Google Icon Font-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <!--Import bootstrap css-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <!--Import materialize.css-->
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="css/materialize.min.css"
-      media="screen,projection"
-    />
-    <!--Link our own CSS-->
-    <link rel="stylesheet" href="css/style.css" />
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <title>Recipe Search</title>
-  </head>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!--Import bootstrap css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <!--Link our own CSS-->
+  <link rel="stylesheet" href="css/style.css" />
 
-  <body>
-    <!-- <div class="row">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <title>Recipe Search</title>
+</head>
+
+<body>
+  <!-- <div class="row">
       <div class="col-12"> -->
-    <div class="jumbotron jumbotron-fluid">
-      <h1 class="display-4 text-center">
-        Don't know what to eat?
-        <i class="medium material-icons">restaurant</i>
-      </h1>
-      <!-- </div>
+  <div class="jumbotron jumbotron-fluid">
+    <h1 class="display-4 text-center">
+      Don't know what to eat?
+      <i class="medium material-icons">restaurant</i>
+    </h1>
+    <!-- </div>
       </div> -->
-    </div>
+  </div>
 
-    <main class="container" id="decision-container">
-      <h2 id="decision">Let us help you decide.</h2>
-
+  <main class="container" id="decision-container">
+    <h2 id="decision">  Let us help you decide.</h2>
+    <form id="form">
       <div class="row">
         <div class="col">
           <div class="input-field col s12">
-            <input id="food-input" type="text" class="validate" />
-            <label for="food-input"
-              >Enter 1 <strong>MAIN</strong> Ingredient</label
-            >
+            <label for="food-input">Enter 1 <strong>MAIN</strong> Ingredient</label>
+            <input id="food-input" type="text" class="validate"/>
           </div>
         </div>
       </div>
+    </form>
 
-      <!--New row for the dietary preference-->
-      <div class="row">
-        <div class="input-field col s12">
-          <select id="dPreference">
-            <option value="" disabled selected>Dietary Preference</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-          </select>
-        </div>
+    <!--New row for the dietary preference-->
+    <div class="row">
+      <div class="input-field col s12">
+        <select id="dPreference">
+          <option value="" disabled selected>Dietary Preference</option>
+          <option value="balanced">Balanced</option>
+          <option value="high-protein">High protein</option>
+          <option value="low-carb">Low Carbs</option>
+          <option value="low-fat">Low Fat</option>
+        </select>
       </div>
-
-      <!--New row for the cuisine type-->
-      <div class="row">
-        <div class="input-field col s12">
-          <select id="cuisineT">
-            <option value="" disabled selected>Cuisine Type</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-          </select>
-        </div>
-      </div>
-
-      <!--New row for the cooking time-->
-      <div class="row">
-        <div class="input-field col s12">
-          <select id="cookingT">
-            <option value="" disabled selected>Cooking Time</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-          </select>
-        </div>
-      </div>
-
-      <div>
-        <a class="waves-effect waves-light btn" type="submit" id="gRep"
-          >Get Recipe</a
-        >
-      </div>
-    </main>
-
-    <!--Section that houses the printed Recipes and clear button-->
-    <section id="recipesSection" class="container">
-      <h5>Recipes:</h5>
-
-      <div class="section">
-        <a class="waves-effect waves-light btn-small" id="clear">Clear All</a>
-      </div>
-      <div class="divider"></div>
-
-      <!--div to include the recipe cards-->
-        <!-- Beginning -->
-          <div class="container recipe-space">
-            <div class="img"></div>
-            <div class="text-container">
-              <span class="decoration-line"></span>
-              <h1 id="recipe-title">Recipe Title</h1>
-              <ul class="ingredients-list">
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-              </ul>
-              <p id="recipe-instructions">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                magnam id assumenda aliquam possimus unde fugit quod veritatis
-                vero quisquam totam illo rem qui, quis iure voluptatibus
-                voluptatem odit omnis ipsa. Vero beatae exercitationem
-                consectetur deserunt quo aliquam repellendus iusto deleniti,
-                quis neque. Sed ipsum hic in velit dolorum? Illo.
-              </p>
-              <a
-                id="recipe link"
-                href="https://www.nytimes.com/2018/12/31/smarter-living/better-habits-tips-new-year-resolutions-science.html"
-                target="_blank"
-                >See recipe source</a
-              >
-            </div>
-          </div>
-        </div>
-        <!-- End -->
-    </section>
-
-    <!-- <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-          </ul>
-        </div>
-    </nav>
-
-    
-
-    <div class="section">
-        <div class="row">
-            <div class="input-field col s12">
-              <input id="name" type="text" class="validate">
-              <label for="name">Name</label>
-            </div>
-          </div>
     </div>
 
-<form id="food-form">
+    <!--New row for the cuisine type-->
+    <div class="row">
+      <div class="input-field col s12">
+        <select id="hLabel">
+          <option value="" disabled selected>Health Label</option>
+          <option value="vegan">Vegan</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="sugar-conscious">Low Sugar</option>
+          <option value="peanut-free">Peanut Free</option>
+          <option value="tree-nut-free">Tree-nut Free</option>
+          <option value="alcohol-free">Alcohol Free</option>
+        </select>
+      </div>
+    </div>
 
- <label for="food-input">Add your ingredient!</label>
- <input type="text" id="food-input">
- <input id="find-food" type="submit" value="Search Recipe">
+    <!--New row for the cooking time-->
+    <div class="row">
+      <div class="input-field col s12">
+        <select id="cookingT">
+          <option value="" disabled selected>Cooking Time</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </div>
+    </div>
 
-</form>
+    <div>
+      <button class="waves-effect waves-light btn" type="submit" id="gRep">Get Recipe</button>
+    </div>
+  </main>
 
-<div class="section">    
-  <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-</div>
+  <!--Section that houses the printed Recipes and clear button-->
+  <section id="recipesSection" class="container">
+    <h5>Recipes:</h5>
 
-<div id="food-view"></div>
+    <div class="section">
+      <button class="waves-effect waves-light btn" id="clear">Clear All</button>
+    </div>
+    <div class="divider"></div>
+
+    <!--div to include the recipe cards-->
+    <!-- Beginning -->
+    <div class="container recipe-space">
+      <div><img class="img" src="" alt="Food-Image"></div>
+      <div class="text-container">
+        <span class="decoration-line"></span>
+        <h5 id="recipe-title">Recipe Title</h5>
+        <ul class="ingredients-list">
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+        <p id="recipe-instructions">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+          magnam id assumenda aliquam possimus unde fugit quod veritatis
+          vero quisquam totam illo rem qui, quis iure voluptatibus
+          voluptatem odit omnis ipsa. Vero beatae exercitationem
+          consectetur deserunt quo aliquam repellendus iusto deleniti,
+          quis neque. Sed ipsum hic in velit dolorum? Illo.
+        </p>
+        <a id="recipe-link"
+          href="#"
+          target="_blank">Click here to see the recipe steps</a>
+      </div>
+    </div>
+    </div>
+    <!-- End -->
+  </section>
 
 
+  <!-- JavaScript at end of body for optimized loading -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="cssScript.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  
+</body>
 
-
-<!
-<div id="food-view"></div>
-<script type="text/javascript">
-
-function foodFunction(){
-    var strFood = document.getElementById("food-input").value;
-    alert("Input is: " + strFood);
-    event.preventDefault();
-
-    console.log(strFood);
-} -->
-
-    <!-- /////
-// VARIABLES
-/////
-
-// // array to add cities to, to be grabbed from after search
-// var citiesArray = JSON.parse(localStorage.getItem("cities")) || [];
-
-// const m = moment(); -->
-
-    <!-- JavaScript at end of body for optimized loading -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="cssScript.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-  </body>
 </html>
