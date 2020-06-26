@@ -6,6 +6,7 @@ $(document).ready(function(){
   const apiKey = "6d32852b741eb95d8988031957d11ab4";
   const apiId = "cd86986f"
   
+  //get recipe button
   $("#gRep").click(function(){
     renderSearch()
   })
@@ -62,5 +63,6 @@ $(document).ready(function(){
     console.log($.param(input))
     return $.param(input)
   }
+
 
 });
