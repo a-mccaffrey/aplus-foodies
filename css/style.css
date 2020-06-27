@@ -1,112 +1,138 @@
-body{
-    background-color: #FEEFE5;
+body {
+  background-color: #000000;
 }
 
-main{
-    height:auto;
-    width: auto;
-    border:2px solid #130701;
+main {
+  height: auto;
+  width: auto;
+  border: 2px solid #130701;
 }
-
-.jumbotron{
-    padding: 25px 25px 25px 25px;
-    border-radius: 0px;
-    background-color: #FA003F !important;
-    
+.jumbotron {
+  border-radius: 0px;
+  background-color: transparent !important;
+  height: 300px;
 }
 h1 {
-    color: #FEEFE5;
+  color: #ffffff;
 }
-#decision{
-    width:180px;
-    margin-top:-10px;
-    margin-left:5px;
-    background: #FEEFE5;
-    font-size: medium;
-    padding-left: 10px;
+.title-background-header {
+  background-color: #fa003f;
+  border-radius: 0px 200px 200px 200px;
+  -moz-border-radius: 0px 200px 200px 200px;
+  -webkit-border-radius: 0px 200px 200px 200px;
+  border: 5px solid #000000;
+  padding: 20px;
+  margin-top: 100px;
+  text-align: center;
 }
-
-.container #decision-container{
-    margin: 10px 0px 10px 20px;
-    max-width: 100%;
-    width: 90%;
-    padding-bottom: 20px;
+.title-background-card {
+   background-color: #fa003f;
+   border-radius: 0px 200px 200px 200px;
+   -moz-border-radius: 0px 200px 200px 200px;
+   -webkit-border-radius: 0px 200px 200px 200px;
+   border: 3px solid #000000;
+   padding: 5px;
+ }
+#decision {
+ color: #ffffff;
+  width: 100%;
+  margin-top: -10px;
+  margin-left: 5px;
+  font-size: medium;
+}
+#decision-container {
+  margin: 20px;
+  max-width: 100%;
+  width: 90%;
+  padding-bottom: 20px;
+  background-color: #feefe5;
 }
 /* Generate Recipe Button */
-#gRep{
-    margin: 10px;
+#gRep {
+  margin: 10px;
 }
 
-.row{
-    margin-top: -15px;
-    margin-bottom: -15px;
+.row {
+  margin-top: -15px;
+  margin-bottom: -15px;
 }
 
-#recipesSection{
-    padding-left: 15px;
+#recipesSection {
+  padding-left: 15px;
 }
-.btn, .btn-large, .btn-small {
-    background-color: #FA003F;
+.btn,
+.btn-large,
+.btn-small {
+  background-color: #fa003f;
 }
-.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
-    background-color: #EE6123;
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus,
+.btn-floating:focus {
+  background-color: #ee6123;
 }
-.btn:active, .btn-large:active, .btn-small:active, .btn-floating:active {
-    background-color: #EE6123;
+.btn:active,
+.btn-large:active,
+.btn-small:active,
+.btn-floating:active {
+  background-color: #ee6123;
 }
-.btn:hover, .btn-large:hover, .btn-small:hover, .btn-floating:hover {
-    background-color: #EE6123;
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover,
+.btn-floating:hover {
+  background-color: #ee6123;
 }
 #recipesSection {
-    padding: 30px;
+  padding: 30px;
 }
 
 /* Card Styling */
 
 html {
-   font-family: "Helvetica Neue", "Arial";
-   box-sizing: border-box;
+  font-family: "Helvetica Neue", "Arial";
+  box-sizing: border-box;
 }
 
 span.decoration-line {
-   display: inline-block;
-   width: 50px;
-   height: 5px;
-   background-color: #FA003F; /* This is the pretty line on the box */
-   margin-bottom: 30px;
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color: #fa003f; /* This is the pretty line on the box */
+  margin-bottom: 30px;
 }
 
 img {
-   width: 100%;
+  width: 100%;
 }
 
 h1 {
-   font-weight: 600;
-   font-size: 36px;
-   margin: 0 0 15px;
+  font-weight: 600;
+  font-size: 36px;
+  margin: 0 0 15px;
 }
 
 p {
-   font-weight: 400;
-   line-height: 24px;
-   margin: 0 0 15px 0;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 15px 0;
 }
 
 a {
-   text-decoration: none;
-   text-transform: uppercase;
-   color: #EE6123; /* Link Colour */
-   font-weight: bold;
-   font-size: 12px;
-   position: relative;
-   display: inline-block;
-   z-index: 1;
-   padding: 5px;
-   left: -5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ee6123; /* Link Colour */
+  font-weight: bold;
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 5px;
+  left: -5px;
 }
 
 a:hover {
-   color: #EE6123; /* Link Hover Colour */
+  color: #ee6123; /* Link Hover Colour */
 }
 /* 
 a::before {
@@ -130,65 +156,76 @@ a:hover::before {
 } */
 
 div.site {
-   background-color: #FEEFE5;
-   height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+  background-color: #feefe5;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
+/* 
 div.container {
-   background-color: #FEEFE5;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   margin: 30px;
-   /* box-shadow: 0 8px 16px rgba(black, .45); */
+  background-color: #feefe5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  /* box-shadow: 0 8px 16px rgba(black, .45);
 }
 
 img {
-   height: 300px;
-   width: 100%;
-   background: url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg");
-   background-position: center;
-   background-size: cover;
-   margin: auto;
+  height: 300px;
+  width: 100%;
+  background: url("https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg");
+  background-position: center;
+  background-size: cover;
+  margin: auto;
 }
 
 div.text-container {
-   margin: 60px 45px 55px;
+  margin: 60px 45px 55px;
 }
-
 
 @media screen and (min-width: 768px) {
   div.container {
     flex-direction: row;
-     width: 100%;
+    width: 100%;
   }
-   
-   div.img {
-      height: 420px;
-      min-width: 360px;
-   }
-   
-   div.text-container {
-      margin: 0 60px;
-      max-width: 660px;
-   }
+
+  div.img {
+    height: 420px;
+    min-width: 360px;
+  }
+
+  div.text-container {
+    margin: 0 60px;
+    max-width: 660px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-   div.container {
-      max-width: 1200px;
-   }
+  div.container {
+    max-width: 1200px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
 }
 
+/* Styling for the Video */
+#myVideo {
+  position: fixed;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  max-height: 100%;
+}
 
-View Compiled
-
-Resources1×0.5×0.25×Rerun
+.background-overlay {
+  position: relative;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(255,0,0,0.5));
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
