@@ -85,6 +85,3 @@ $("button").click(function(){
     $("ul").empty();
  });
 
-
-
-
