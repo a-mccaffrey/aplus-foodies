@@ -6,7 +6,7 @@ $(document).ready(function(){
   const apiId = "cd86986f"
   
   //get recipe button
-  $("#submit").click(function(e){
+  $("#find-food").click(function(e){
     e.preventDefault()
     renderSearch()
   })
