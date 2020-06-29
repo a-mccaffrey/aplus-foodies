@@ -1,66 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--Import Google Icon Font-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <!--Import bootstrap css-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <!--Import materialize.css-->
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="css/materialize.min.css"
-      media="screen,projection"
-    />
-    <!--Link our own CSS-->
-    <link rel="stylesheet" href="css/style.css" />
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <title>Recipe Search</title>
-  </head>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!--Import bootstrap css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <!--Link our own CSS-->
+  <link rel="stylesheet" href="css/style.css" />
 
-  <body>
-    
-    <!-- The video -->
-    <video autoplay muted loop id="myVideo">
-      <source src="Assets/pexels-video.mp4" type="video/mp4" />
-    </video>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <title>Recipe Search</title>
+</head>
 
-    <div class="background-overlay">
+<body>
+
+  <!-- The video -->
+  <video loop muted id="myVideo"></video>
+  <div id="video_cover"></div>
+
+  <div class="background-overlay">
 
     <div class="container">
 
-    <!-- Optional: some overlay text to describe the video -->
+      <!-- Optional: some overlay text to describe the video -->
       <div class="jumbotron jumbotron-fluid vertical-center">
         <h1 class="display-4 text-center">
           <span class="title-background-header">
             Don't know what to eat?
             <i class="medium material-icons">restaurant</i>
-            </span>
+          </span>
         </h1>
       </div>
       <main id="decision-container">
         <h2 id="decision"><span class="title-background-card">Let us help you decide.</span></h2>
-        
+
         <!-- form part starts here -->
         <div class="row">
           <form class="col s12">
             <!-- New Row for First option -->
             <div class="row">
               <div class="input-field col s12">
-                <label for="food-input"
-                  >Enter 1 <strong>MAIN</strong> Ingredient</label>
+                <label for="food-input">Enter 1 <strong>MAIN</strong> Ingredient</label>
                 <input id="food-input" type="text" class="validate" />
               </div>
-            </div>      
+            </div>
             <!--New row for the dietary preference-->
             <div class="row">
               <div class="input-field col s12">
@@ -70,47 +58,47 @@
                   <option value="high-protein">High protein</option>
                   <option value="low-carb">Low Carbs</option>
                   <option value="low-fat">Low Fat</option>
-            </select>
-          </div>
+                </select>
+              </div>
+            </div>
+
+            <!--New row for the cuisine type-->
+            <div class="row">
+              <div class="input-field col s12">
+                <select id="hLabel">
+                  <option value="" disabled selected>Health Label</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="sugar-conscious">Low Sugar</option>
+                  <option value="peanut-free">Peanut Free</option>
+                  <option value="tree-nut-free">Tree-nut Free</option>
+                  <option value="alcohol-free">Alcohol Free</option>
+                </select>
+              </div>
+            </div>
+
+            <!--New row for the cooking time-->
+            <div class="row">
+              <div class="input-field col s12">
+                <select id="cookingT">
+                  <option value="" disabled selected>Cooking Time</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- New row for the submit button -->
+            <div class="row">
+              <button class="waves-effect waves-light btn" type="submit" id="submit">
+                Get Recipe
+              </button>
+            </div>
+          </form>
         </div>
 
-        <!--New row for the cuisine type-->
-        <div class="row">
-          <div class="input-field col s12">
-            <select id="hLabel">
-              <option value="" disabled selected>Health Label</option>
-              <option value="vegan">Vegan</option>
-              <option value="vegetarian">Vegetarian</option>
-              <option value="sugar-conscious">Low Sugar</option>
-              <option value="peanut-free">Peanut Free</option>
-              <option value="tree-nut-free">Tree-nut Free</option>
-              <option value="alcohol-free">Alcohol Free</option>
-            </select>
-          </div>
-        </div>
 
-        <!--New row for the cooking time-->
-        <div class="row">
-          <div class="input-field col s12">
-            <select id="cookingT">
-              <option value="" disabled selected>Cooking Time</option>
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- New row for the submit button -->
-        <div class="row">
-          <button class="waves-effect waves-light btn" type="submit" id="gRep">
-            Get Recipe
-          </button>
-        </div>
-      </div>
-      </form>
-
-       
       </main>
 
       <!--Section that houses the printed Recipes and clear button-->
@@ -126,7 +114,7 @@
 
         <!--div to include the recipe cards-->
         <!-- Beginning -->
-          <div class="recipe-space">
+        <div class="recipe-space">
           <div><img class="img" src="" alt="Food-Image" /></div>
           <div class="text-container">
             <span class="decoration-line"></span>
@@ -147,19 +135,20 @@
               deserunt quo aliquam repellendus iusto deleniti, quis neque. Sed
               ipsum hic in velit dolorum? Illo.
             </p>
-            <a id="recipe-link" href="#" target="_blank"
-              >Click here to see the recipe steps</a
-            >
+            <a id="recipe-link" href="#" target="_blank">Click here to see the recipe steps</a>
           </div>
         </div>
-      </div>
-      </section>
-      </div>
-    <!-- End -->
+    </div>
+    </section>
+  </div>
+  <!-- End -->
 
-    <!-- JavaScript at end of body for optimized loading -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="cssScript.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-  </body>
+  <!-- JavaScript at end of body for optimized loading -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="cssScript.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="bideo.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

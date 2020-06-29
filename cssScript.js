@@ -2,12 +2,12 @@
 $(document).ready(function(){
   $('select').formSelect();
 
-  //$('#form').parsley()
   const apiKey = "6d32852b741eb95d8988031957d11ab4";
   const apiId = "cd86986f"
   
   //get recipe button
-  $("#gRep").click(function(){
+  $("#submit").click(function(e){
+    e.preventDefault()
     renderSearch()
   })
 
