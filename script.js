@@ -14,8 +14,8 @@ $("#find-food").on("click", function(event) {
 
     // Here we grab the text from the input box and checkboxes for health labels
     var strFood = $("#food-input").val();
-    var healthType = document.querySelector('input[name="label"]:checked').value;
-    var foodDiet = document.querySelector('input[name="diet"]:checked').value;
+    var healthType = document.querySelector('option[name="label"]:selected').value;
+    var foodDiet = document.querySelector('option[name="diet"]:selected').value;
     // console.log(foodDiet);
 
     // Here we construct our URL
