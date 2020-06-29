@@ -7,10 +7,10 @@
       rel="stylesheet"
     />
     <!--Import bootstrap css-->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
-    />
+    /> -->
     <!--Import materialize.css-->
     <link
       type="text/css"
@@ -28,110 +28,120 @@
   </head>
 
   <body>
-    
+
     <!-- The video -->
     <video autoplay muted loop id="myVideo">
       <source src="Assets/pexels-video.mp4" type="video/mp4" />
     </video>
 
-    <div class="background-overlay">
+    <!-- The background overlay (transparent colour)  -->
+    <div class="background-overlay">  
+      
+      <!-- Content starts here -->
+      <div class="container center-align">
 
-    <div class="container">
-
-    <!-- Optional: some overlay text to describe the video -->
-      <div class="jumbotron jumbotron-fluid vertical-center">
-        <h1 class="display-4 text-center">
-          <span class="title-background-header">
+    <!-- Page Header -->
+    <div class="row">
+      <div class="col s12">
+        <h1 id="title-background-header" class="z-depth-5">
             Don't know what to eat?
-            <i class="medium material-icons">restaurant</i>
-            </span>
-        </h1>
+            <i class="medium material-icons">restaurant
+            </i>
+          </h1>
+        </div>
       </div>
-      <main id="decision-container">
-        <h2 id="decision"><span class="title-background-card">Let us help you decide.</span></h2>
-        
-        <!-- form part starts here -->
+      
+      <!-- Decision Making Area -->
+      <main id="decision-container" class="z-depth-5">
+        <h2 id="decision">
+          <span id="title-background-card" class="z-depth-2">Let us help you decide.
+          </span>
+        </h2>
+        <!-- input parts starts here -->
         <div class="row">
           <form class="col s12">
-            <!-- New Row for First option -->
+            <!-- Input Ingredient Row -->
             <div class="row">
               <div class="input-field col s12">
-                <label for="food-input"
-                  >Enter 1 <strong>MAIN</strong> Ingredient</label>
-                <input id="food-input" type="text" class="validate" />
-              </div>
-            </div>      
-            <!--New row for the dietary preference-->
+                <label for="food-input">Enter 1 <strong>MAIN</strong> Ingredient
+                </label>
+                <input id="food-input" type="text" class="validate"/>
+              </div>  
+            </div>  
+            <!-- End -->
+            <!-- Input dietary preference row -->
             <div class="row">
-              <div class="input-field col s12">
+              <div class="input-field col s6">
                 <select id="dPreference">
                   <option value="" disabled selected>Dietary Preference</option>
                   <option value="balanced">Balanced</option>
                   <option value="high-protein">High protein</option>
                   <option value="low-carb">Low Carbs</option>
                   <option value="low-fat">Low Fat</option>
-            </select>
-          </div>
-        </div>
-
-        <!--New row for the cuisine type-->
-        <div class="row">
-          <div class="input-field col s12">
-            <select id="hLabel">
-              <option value="" disabled selected>Health Label</option>
-              <option value="vegan">Vegan</option>
-              <option value="vegetarian">Vegetarian</option>
-              <option value="sugar-conscious">Low Sugar</option>
-              <option value="peanut-free">Peanut Free</option>
-              <option value="tree-nut-free">Tree-nut Free</option>
-              <option value="alcohol-free">Alcohol Free</option>
-            </select>
-          </div>
-        </div>
-
-        <!--New row for the cooking time-->
-        <div class="row">
-          <div class="input-field col s12">
-            <select id="cookingT">
-              <option value="" disabled selected>Cooking Time</option>
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
-          </div>
-        </div>
-
+                </select>
+                </div>
+              </div>
+              <!--New row for the cuisine type-->
+              <div class="row">
+                <div class="input-field col s12">
+                  <select id="hLabel">
+                    <option value="" disabled selected>Health Label</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="sugar-conscious">Low Sugar</option>
+                    <option value="peanut-free">Peanut Free</option>
+                    <option value="tree-nut-free">Tree-nut Free</option>
+                    <option value="alcohol-free">Alcohol Free</option>
+                  </select>
+                </div>
+              </div>
+              <!--New row for the cooking time-->
+              <div class="row">
+                <div class="input-field col s12">
+                  <select id="cookingT">
+                    <option value="" disabled selected>Cooking Time</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                </div>
+              </div>
+        
         <!-- New row for the submit button -->
         <div class="row">
-          <button class="waves-effect waves-light btn" type="submit" id="gRep">
+          <button class="btn waves-effect waves-light btn" type="submit" id="find-food">
             Get Recipe
           </button>
         </div>
-      </div>
       </form>
-
        
       </main>
 
       <!--Section that houses the printed Recipes and clear button-->
-      <section id="recipesSection" class="container">
-        <h5>Recipes:</h5>
-
-        <div class="section">
-          <button class="waves-effect waves-light btn" id="clear">
-            Clear All
-          </button>
-        </div>
+      <div class="row">
+        <div class="col s12">
+      <section id="recipesSection">
+       <h5 id="title-recipe-section">This is what you should eat!</h5>
         <div class="divider"></div>
+        <button class="waves-effect waves-light btn" id="clear">
+          Clear All
+        </button>
 
         <!--div to include the recipe cards-->
+
         <!-- Beginning -->
           <div class="recipe-space">
-          <div><img class="img" src="" alt="Food-Image" /></div>
-          <div class="text-container">
-            <span class="decoration-line"></span>
-            <h5 id="recipe-title">Recipe Title</h5>
-            <ul class="ingredients-list">
+
+            <!-- Mobile-only -->
+            <div class="row hide-on-med-and-up">
+              <div class="col s12 m7">
+                <div class="card vertical-card z-depth-5">
+                  <div class="card-image vertical-image">
+                    <img class="img" src="./Assets/flat-lay-photography-of-vegetable-salad-on-plate-1640777.jpg" alt="Food-Image">
+                  </div>
+                  <div class="card-content vertical-content">
+                    <h5 class="recipe-title">Card Title</h5>
+                    <ul class="ingredients-list">
               <li>Lorem ipsum dolor sit amet.</li>
               <li>Lorem ipsum dolor sit amet.</li>
               <li>Lorem ipsum dolor sit amet.</li>
@@ -147,19 +157,68 @@
               deserunt quo aliquam repellendus iusto deleniti, quis neque. Sed
               ipsum hic in velit dolorum? Illo.
             </p>
-            <a id="recipe-link" href="#" target="_blank"
-              >Click here to see the recipe steps</a
-            >
+                  </div>
+                  <div class="card-action">
+                    <a href="#">This is a link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tablet and Desktop -->
+            <div class="row hide-on-small-only">
+            <div class="col s12">
+              <div class="card horizontal z-depth-5">
+                <div class="card-image">
+                  <img class="img horizontal-image" src="./Assets/flat-lay-photography-of-vegetable-salad-on-plate-1640777.jpg" alt="Food-Image">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <h5 class="recipe-title">Card Title</h5>
+                    <p>I am a very simple card. I am good at containing small bits of information.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum veniam dolore repellendus reprehenderit, ipsum porro incidunt deleniti fugiat, laudantium sed dolor esse possimus optio eum alias reiciendis eveniet dicta facere fugit magnam mollitia. Possimus eligendi aperiam dicta, voluptate cupiditate perferendis optio corporis tempora velit odit ad similique natus debitis sequi, et dolorum. At asperiores maiores pariatur ullam dolore deleniti praesentium reiciendis suscipit soluta cupiditate! Perferendis nulla et saepe a beatae maxime! Aut unde, iure voluptate at sint inventore, reiciendis quod veniam nemo voluptatem harum illum, odio vitae labore. Cum cumque fuga harum adipisci quidem ipsam nisi nostrum ipsum nemo porro?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum veniam dolore repellendus reprehenderit, ipsum porro incidunt deleniti fugiat, laudantium sed dolor esse possimus optio eum alias reiciendis eveniet dicta facere fugit magnam mollitia. Possimus eligendi aperiam dicta, voluptate cupiditate perferendis optio corporis tempora velit odit ad similique natus debitis sequi, et dolorum. At asperiores maiores pariatur ullam dolore deleniti praesentium reiciendis suscipit soluta cupiditate! Perferendis nulla et saepe a beatae maxime! Aut unde, iure voluptate at sint inventore, reiciendis quod veniam nemo voluptatem harum illum, odio vitae labore. Cum cumque fuga harum adipisci quidem ipsam nisi nostrum ipsum nemo porro?</p>
+
+                  </div>
+                  <div class="card-action">
+                    <a href="#">This is a link</a>
+                  </div>
+                </div>
+              </div>
+            </div>        
           </div>
-        </div>
+
+          <!-- Video Iframe -->
+
+          <div class="row">
+            <div class="col s12">
+              <div class="card video-card z-depth-5">
+                <div class="card-content">
+                  <span class="card-title">Video Recipe</span>
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/JsB57FtaxXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <!-- End -->
+
       </div>
       </section>
+    </div>
+  </div>
+      </div>
       </div>
     <!-- End -->
 
     <!-- JavaScript at end of body for optimized loading -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="cssScript.js"></script>
+    <script src="script.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>
