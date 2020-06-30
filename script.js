@@ -14,8 +14,8 @@ $("#find-video").on("click", function(event){
 
     // Here we grab the text from the input box and checkboxes for health labels
     var strFood1 = $("#food-input").val();
-    var healthType1 = document.querySelector('input[name="label"]:checked').value;
-    var foodDiet1 = document.querySelector('input[name="diet"]:checked').value;
+    var healthType1 = document.querySelector("#dPreference").value;
+    var foodDiet1 = document.querySelector("#hLabel").value;
 
 
     var youQuery = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=" + strFood1 + "+" +  healthType1 + "+" + foodDiet1 + "&type=video&key=AIzaSyAjMZVtR30vxR-pupzeRVV8OwRLQdJzSA0";
@@ -26,16 +26,19 @@ $("#find-video").on("click", function(event){
     $.ajax({
         url: youQuery,
         method: "GET"
-    }).then(function(response1){
-        console.log(response1);
+    }).then(function(response){
+        console.log(response);
 
         // creating index to hold the 'randomize'
         var indexCreator1 = Math.floor((Math.random() * 10) + 1);
 
         // obtaining video ID
-        var videoID = response1.items[indexCreator1].id.videoId;
+        var videoID = response.items[indexCreator1].id.videoId;
         // console.log(videoID);
+        // create a video card
+        var videoCard = $("<div class='row'> <div class='col s12'> <div class='card video-card z-depth-5'> <div class='card-content'> <span class='card-title'>Video Recipe</span> <div class='video-container'> <iframe id='food-youtube' src='' ></iframe> </div> </div> <div class='card-action'></div> </div> </div> </div>");
 
+        // url for the video
         var videoSource = "https://www.youtube.com/embed/" + videoID;
 
         $("#food-youtube").attr("src", videoSource);
@@ -43,10 +46,11 @@ $("#find-video").on("click", function(event){
         // link
         var videoLink = $("<a>" + "Click here to watch on full-screen!" + "</a>");
 
-
         videoLink.attr("href", videoSource);
 
-        $("#video-link").prepend(videoLink);
+        $(".card-action").append(videoLink);
+
+        $("#recipe-space").append(videoCard);
 
     });
 
@@ -126,8 +130,9 @@ $("#find-food").on("click", function(event) {
     });
 });
 
-$("button").click(function(){
+$("#clear").click(function(){
     $("div").empty();
     $("ul").empty();
+    $("iframe").empty();
  });
 
