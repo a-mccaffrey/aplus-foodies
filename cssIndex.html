@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <!--Import Google Icon Font-->
     <link
@@ -29,59 +28,58 @@
   </head>
 
   <body>
-
     <!-- The video -->
     <video loop muted id="myVideo"></video>
     <div id="video_cover"></div>
 
     <!-- The background overlay (transparent colour)  -->
-    <div class="background-overlay">  
-      
+    <div class="background-overlay">
       <!-- Content starts here -->
       <div class="container center-align">
-
-    <!-- Page Header -->
-    <div class="row">
-      <div class="col s12">
-        <h1 id="title-background-header" class="z-depth-5">
-            Don't know what to eat?
-            <i class="medium material-icons">restaurant
-            </i>
-          </h1>
-        </div>
-      </div>
-      
-      <!-- Decision Making Area -->
-      <main id="decision-container" class="z-depth-5">
-        <h2 id="decision">
-          <span id="title-background-card" class="z-depth-2">Let us help you decide.
-          </span>
-        </h2>
-        <!-- input parts starts here -->
-
+        <!-- Page Header -->
         <div class="row">
-          <form class="col s12">
-            <!-- Input Ingredient Row -->
-            <div class="row">
-              <div class="input-field col s12">
+          <div class="col s12">
+            <h1 id="title-background-header" class="z-depth-5">
+              Don't know what to eat?
+              <i class="medium material-icons">restaurant </i>
+            </h1>
+          </div>
+        </div>
 
-                <label for="food-input">Enter 1 <strong>MAIN</strong> Ingredient
-                </label>
-                <input id="food-input" type="text" class="validate"/>
-              </div>  
-            </div>  
-            <!-- End -->
-            <!-- Input dietary preference row -->
+        <!-- Decision Making Area -->
+        <main id="decision-container" class="z-depth-5">
+          <h2 id="decision">
+            <span id="title-background-card" class="z-depth-2"
+              >Let us help you decide.
+            </span>
+          </h2>
+          <!-- input parts starts here -->
 
-            <div class="row">
-              <div class="input-field col s12">
-                <select id="dPreference">
-                  <option value="" disabled selected>Dietary Preference</option>
-                  <option value="balanced">Balanced</option>
-                  <option value="high-protein">High protein</option>
-                  <option value="low-carb">Low Carbs</option>
-                  <option value="low-fat">Low Fat</option>
-                </select>
+          <div class="row">
+            <form class="col s12">
+              <!-- Input Ingredient Row -->
+              <div class="row">
+                <div class="input-field col s12">
+                  <label for="food-input"
+                    >Enter 1 <strong>MAIN</strong> Ingredient
+                  </label>
+                  <input id="food-input" type="text" class="validate" />
+                </div>
+              </div>
+              <!-- End -->
+              <!-- Input dietary preference row -->
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <select id="dPreference">
+                    <option value="" disabled selected
+                      >Dietary Preference</option
+                    >
+                    <option value="balanced">Balanced</option>
+                    <option value="high-protein">High protein</option>
+                    <option value="low-carb">Low Carbs</option>
+                    <option value="low-fat">Low Fat</option>
+                  </select>
                 </div>
               </div>
               <!--New row for the cuisine type-->
@@ -109,38 +107,45 @@
                   </select>
                 </div>
               </div>
-        
-        <!-- New row for the submit button -->
+
+              <!-- New row for the submit button -->
+              <div class="row">
+                <button
+                  class="btn waves-effect waves-light btn"
+                  type="submit"
+                  id="find-food"
+                >
+                  Get Written Recipe
+                </button>
+                <button
+                  class="btn waves-effect waves-light btn"
+                  type="submit"
+                  id="find-video"
+                >
+                  Get Video Recipe
+                </button>
+              </div>
+            </form>
+          </div>
+        </main>
+
+        <!--Section that houses the printed Recipes and clear button-->
         <div class="row">
-          <button class="btn waves-effect waves-light btn" type="submit" id="find-food">
-            Get Written Recipe
-          </button>
-          <button class="btn waves-effect waves-light btn" type="submit" id="find-video">
-            Get Video Recipe
-          </button>
-        </div>
-      </form>
-       
-      </main>
+          <div class="col s12">
+            <section id="recipesSection">
+              <h5 id="title-recipe-section">This is what you should eat!</h5>
+              <div class="divider"></div>
+              <button class="waves-effect waves-light btn" id="clear">
+                Clear All
+              </button>
 
-      <!--Section that houses the printed Recipes and clear button-->
-      <div class="row">
-        <div class="col s12">
-      <section id="recipesSection">
-       <h5 id="title-recipe-section">This is what you should eat!</h5>
-        <div class="divider"></div>
-        <button class="waves-effect waves-light btn" id="clear">
-          Clear All
-        </button>
+              <!--div to include the recipe cards-->
 
-        <!--div to include the recipe cards-->
+              <!-- Beginning -->
 
-        <!-- Beginning -->
-
-          <div id="recipe-space">
-
-            <!-- Tablet and Mobile -->
-            <!-- <div class="row hide-on-large-only">
+              <div id="recipe-space">
+                <!-- Tablet and Mobile -->
+                <!-- <div class="row hide-on-large-only">
               <div class="col s12">
                 <div class="card vertical-card z-depth-5">
                   <div class="card-image vertical-image">
@@ -174,8 +179,8 @@
               </div>
             </div> -->
 
-            <!-- TDesktop -->
-            <!-- <div class="row hide-on-med-and-down">
+                <!-- TDesktop -->
+                <!-- <div class="row hide-on-med-and-down">
             <div class="col s12">
               <div class="card horizontal z-depth-5">
                 <div class="card-image">
@@ -197,18 +202,33 @@
             </div>        
           </div> -->
 
-          <!-- Video Iframe -->
+                <!-- Video Iframe -->
 
-          <div class="row"> <div class="col s12"> <div class="card video-card z-depth-5"> <div class="card-content"> <span class="card-title">Video Recipe</span> <div class="video-container"> <iframe src="https://www.youtube.com/embed/JsB57FtaxXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div> </div> <div class="card-action"> <a href="#">This is a link</a> </div> </div> </div> </div>
-
-            <!-- End -->
-
+                <div class="row">
+                  <div class="col s12">
+                    <div class="card video-card z-depth-5">
+                      <div class="card-content">
+                        <span class="card-title">Video Recipe</span>
+                        <div class="video-container">
+                          <iframe
+                            src="https://www.youtube.com/embed/JsB57FtaxXQ"
+                          ></iframe>
+                        </div>
+                      </div>
+                      <div class="card-action">
+                        <a href="#">This is a link</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End -->
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
-      </section>
     </div>
-  </div>
-      </div>
-      </div>
+
     <!-- End -->
 
     <!-- JavaScript at end of body for optimized loading -->
@@ -219,4 +239,3 @@
     <script src="main.js"></script>
   </body>
 </html>
-
