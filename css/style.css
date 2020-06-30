@@ -67,12 +67,12 @@ h1 {
 option {
   color: #ee6123;
 }
- /* label focus color */
- .input-field input[type=text]:focus + label {
+/* label focus color */
+.input-field input[type="text"]:focus + label {
   color: #fa003f;
 }
 /* label underline focus color */
-.input-field input[type=text]:focus {
+.input-field input[type="text"]:focus {
   border-bottom: 1px solid #000;
   box-shadow: 0 1px 0 0 #000;
 }
@@ -80,7 +80,9 @@ option {
 .card {
   margin-top: 20px;
 }
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+.card
+  .card-action
+  a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
   color: #fa003f;
 }
 /* Styling for the desktop cards */
