@@ -37,9 +37,14 @@
      <input name="diet" id="food-radio" value="peanut-free" type="radio"/> Peanut-Free
  </form>
  <br>
+
  <input id="find-food" type="submit" value="Search Recipe">
+ <input id="find-video" type="submit" value="Search Video">
 
 </form>
+
+<br>
+
 
 <button>Clear Card!</button>
 
@@ -57,31 +62,13 @@
 <div id="food-link">
 </div>
 
+<iframe id="food-youtube" type="text/html" width="720" height="520"
+ src="" frameborder="0">
+</iframe>
+
+<div id="video-link"></div>
 
 
-
-
-<!-- 
-<div id="food-view"></div>
-<script type="text/javascript">
-
-function foodFunction(){
-    var strFood = document.getElementById("food-input").value;
-    alert("Input is: " + strFood);
-    event.preventDefault();
-
-    console.log(strFood);
-} -->
-
-
-<!-- /////
-// VARIABLES
-/////
-
-// // array to add cities to, to be grabbed from after search
-// var citiesArray = JSON.parse(localStorage.getItem("cities")) || [];
-
-// const m = moment(); -->
 
 </script>
 

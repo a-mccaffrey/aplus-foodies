@@ -6,6 +6,54 @@
 var APIKey = "75880f1a2313ab8b5d85907f998f30f7";
 
 
+
+$("#find-video").on("click", function(event){
+    // event.preventDefault() can be used to prevent an event's default behavior.
+    // Here, it prevents the submit button from trying to submit a form when clicked
+    event.preventDefault();
+
+    // Here we grab the text from the input box and checkboxes for health labels
+    var strFood1 = $("#food-input").val();
+    var healthType1 = document.querySelector('input[name="label"]:checked').value;
+    var foodDiet1 = document.querySelector('input[name="diet"]:checked').value;
+
+
+    var youQuery = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=" + strFood1 + "+" +  healthType1 + "+" + foodDiet1 + "&type=video&key=AIzaSyAjMZVtR30vxR-pupzeRVV8OwRLQdJzSA0";
+
+    // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
+    // and display it in the div with an id of food-view
+
+    $.ajax({
+        url: youQuery,
+        method: "GET"
+    }).then(function(response1){
+        console.log(response1);
+
+        // creating index to hold the 'randomize'
+        var indexCreator1 = Math.floor((Math.random() * 10) + 1);
+
+        // obtaining video ID
+        var videoID = response1.items[indexCreator1].id.videoId;
+        // console.log(videoID);
+
+        var videoSource = "https://www.youtube.com/embed/" + videoID;
+
+        $("#food-youtube").attr("src", videoSource);
+
+        // link
+        var videoLink = $("<a>" + "Click here to watch on full-screen!" + "</a>");
+
+
+        videoLink.attr("href", videoSource);
+
+        $("#video-link").prepend(videoLink);
+
+    });
+
+});
+
+
+
 $("#find-food").on("click", function(event) {
 
     // event.preventDefault() can be used to prevent an event's default behavior.
@@ -36,7 +84,7 @@ $("#find-food").on("click", function(event) {
 
         // Storing the recipe label
         var foodlabel = response.hits[indexCreator].recipe.label;
- ;
+ 
         document.getElementById("food-label").innerHTML += "<b>" + foodlabel + "</b>";
 
 
