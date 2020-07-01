@@ -14,11 +14,14 @@ $("#find-video").on("click", function(event){
 
     // Here we grab the text from the input box and checkboxes for health labels
     var strFood1 = $("#food-input").val();
-    var healthType1 = document.querySelector("#dPreference").value;
-    var foodDiet1 = document.querySelector("#hLabel").value;
+    var healthType1 = document.querySelector('input[name="label"]:checked').value;
+    var foodDiet1 = document.querySelector('input[name="diet"]:checked').value;
+    console.log(strFood1)
+    console.log(healthType1)
+    console.log(foodDiet1)
 
 
-    var youQuery = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=" + strFood1 + "+" +  healthType1 + "+" + foodDiet1 + "&type=video&key=AIzaSyAjMZVtR30vxR-pupzeRVV8OwRLQdJzSA0";
+    var youQuery = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=" + strFood1 + "+" +  healthType1 + "+" + foodDiet1 + "&type=video&key=AIzaSyBFBwcFoLzvUM3aOw8whDCKsRk7-Q9IYoo";
 
     // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
     // and display it in the div with an id of food-view
@@ -41,7 +44,7 @@ $("#find-video").on("click", function(event){
         // url for the video
         var videoSource = "https://www.youtube.com/embed/" + videoID;
 
-        $("#food-youtube").attr("src", videoSource);
+        //$("#food-youtube").attr("src", videoSource);
 
         // link
         var videoLink = $("<a>" + "Click here to watch on full-screen!" + "</a>");
