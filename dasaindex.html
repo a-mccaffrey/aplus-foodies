@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Recipe Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+
+<form id="food-form">
+
+ <label for="food-input">Add your ingredient!</label>
+ <input type="text" id="food-input"><br>
+
+ <form id="food-nutrient">
+     <h3>Choose your diet label:</h3>
+     <br>
+     <input name="label" id="food-radio" value="balanced" type="radio"/> Balanced
+     <br>
+     <input name="label" id="food-radio" value="high-protein" type="radio"/> High-Protein
+     <br>
+     <input name="label" id="food-radio" value="low-carb" type="radio"/> Low-Carb
+     <br>
+     <input name="label" id="food-radio" value="low-fat" type="radio"/> Low-Fat
+     <br>
+ </form>
+<br>
+ <form id="food-diet">
+     <h4>Choose your food preference:</h4>
+     <br>
+     <input name="diet" id="food-radio" value="vegan" type="radio"/> Vegan
+     <br>
+     <input name="diet" id="food-radio" value="vegetarian" type="radio"/> Vegetarian
+     <br>
+     <input name="diet" id="food-radio" value="alcohol-free" type="radio"/> Alcohol-free
+     <br>
+     <input name="diet" id="food-radio" value="peanut-free" type="radio"/> Peanut-Free
+ </form>
+ <br>
+
+ <input id="find-food" type="submit" value="Search Recipe">
+ <input id="find-video" type="submit" value="Search Video">
+
+</form>
+
+<br>
+
+
+<button>Clear Card!</button>
+
+<br>
+
+<div id="food-label"></div>
+<br>
+<div id="food-images">
+</div>
+
+<br>
+
+<ul id="food-view"></ul>
+
+<div id="food-link">
+</div>
+
+<iframe id="food-youtube" type="text/html" width="720" height="520"
+ src="" frameborder="0">
+</iframe>
+
+<div id="video-link"></div>
+
+
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script> 
+
+</html>
