@@ -91,7 +91,7 @@
                 </div>
               </div>
 
-              <!-- New row for the submit button -->
+              <!-- New row for the written recipe button -->
               <div class="row">
                 <button
                   class="btn waves-effect waves-light btn"
@@ -100,6 +100,18 @@
                 >
                   Get Written Recipe
                 </button>
+              </div>
+
+              <!-- New Row for the youtube video key entry and button -->
+              <div class="row">
+                <div class="input-field col s12">
+                  <label for="key-input"
+                    >If you want a video recipe, please <a href="https://github.com/a-mccaffrey/aplus-foodies/blob/master/README.md">BYOK</a> (Bring Your Own Key) 
+                  </label>
+                  <input id="key-input" type="text" class="validate" />                  
+                  <span class="helper-text" data-error="wrong" data-success="right">**We will not save this data - this project can only save in your local storage, there is no server</span>
+                </div>  
+              <div class="row">
                 <button
                   class="btn waves-effect waves-light btn"
                   type="submit"
@@ -219,10 +231,12 @@
 
     <!-- JavaScript at end of body for optimized loading -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Makes the dropdowns work -->
-    <script src="js/script.js"></script>
     <!-- Materialize -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!-- Where the magic happens -->
+    <!-- Makes the background video -->
+    <script type="text/javascript" src="js/bideo.js"></script>
+    <!-- Where the magic happens -->    
+    <!-- Makes the dropdowns work -->
+    <script src="js/script.js"></script>
   </body>
 </html>

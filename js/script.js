@@ -130,13 +130,17 @@ $(document).ready(function () {
     e.preventDefault();
     getYtVideo();
   });
-
+  // Get the youtube API key from the user (Bring Your Own API)
+ 
+  // run the youtube video function
   const getYtVideo = () => {
+    var apiYoutube = $("#key-input").val();
     var temp = ytparam();
     var url =
       "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=" +
       temp +
-      "&type=video&key=AIzaSyBFBwcFoLzvUM3aOw8whDCKsRk7-Q9IYoo";
+      "&type=video&key=" +
+      apiYoutube;
     fetch(url)
       .then((response) => {
         return response.json();
@@ -153,15 +157,17 @@ $(document).ready(function () {
     var videoID = data.items[index].id.videoId;
     //videoURL
     var videoSource = "https://www.youtube.com/embed/" + videoID;
+    //videoTitle
+    var videoTitle = data.items[index].snippet.title;
     //
     var div1 = $('<div class="row"/>');
     var div2 = $('<div class="col s12"/>');
     var div3 = $('<div class="card video-card z-depth-5"/>');
     var div4 = $('<div class="card-content"/>');
-    var div5 = $('<div class="video-contanier"/>');
+    var div5 = $('<div class="video-container"/>');
     var div6 = $("<div class=card-action/>");
     var span = $("<span>");
-    span.text("Video Recipe");
+    span.text(videoTitle);
     var frame = $('<iframe src=""/>');
     //
 
