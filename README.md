@@ -2,7 +2,7 @@
 
 ## Instructions for generating your own Youtube API Key starting with a brief explanation of why we did this
 
-We wanted to use the [Youtube V3 API]() in order to generate video recipes, as we wanted to present the user with more options for following along with a recipe.
+We wanted to use the [Youtube V3 API](https://developers.google.com/youtube/v3/docs) in order to generate video recipes, as we wanted to present the user with more options for following along with a recipe.
 
 In order to use a Google API securely, you cannot save it to a github repo. Without understanding more about this topic, we could not obfuscate our API key in order to generate this functionality in a more frictionless fashion. However, we could add this functionality in the future.
 
