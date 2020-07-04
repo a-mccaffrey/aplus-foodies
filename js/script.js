@@ -63,7 +63,7 @@ $(document).ready(function () {
     cardLinkMobile.text("Link to the full recipe and steps");
 
     // Append all the necessary content to the mobile card in the right order
-    $("#recipe-space").append(div1.append(div2.append(div3.append(div4))));
+    $("#recipe-space").prepend(div1.append(div2.append(div3.append(div4))));
     div3.append(div6.append(header));
     div4.append(imageMobile);
     div3.append(cardActionMobile.append(cardLinkMobile));
@@ -100,7 +100,7 @@ $(document).ready(function () {
     cardLinkDesktop.text("Link to the full recipe and steps");
 
     // Append all the necessary content to the desktop card in the right order
-    $("#recipe-space").append(div11.append(div22.append(div33.append(div44))));
+    $("#recipe-space").prepend(div11.append(div22.append(div33.append(div44))));
     div44.append(imageDesktop);
     div33.append(div66.append(div77).prepend(header1));
     div77.append(listDesktop);
@@ -186,7 +186,7 @@ $(document).ready(function () {
     div2.append(div3);
     div1.append(div2);
 
-    $("#recipe-space").append(div1);
+    $("#recipe-space").prepend(div1);
   };
 
   //youtube parameter
@@ -207,4 +207,10 @@ $(document).ready(function () {
     console.log(input);
     return input;
   };
+
+  //function to clear recipe space
+  $("#clear").click(function(e){
+    $("#recipe-space").empty()
+  })
+
 });
